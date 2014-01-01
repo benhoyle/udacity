@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="history">
+		<table>
+			{% for wiki in wikis %}
+			<tr class="history">
+				<td>{{wiki.created.strftime("%c")}}</td>
+				<td>{{wiki.content[0:100]}}</td>
+				<td>{{wiki.userkey}}</td>
+				<td>
+					<a href="{{url}}?v={{wiki.key.urlsafe()}}">View</a>
+				</td>
+				{% if user %}
+				<td>
+					<a href="/_edit{{page_path}}?e={{wiki.key.urlsafe()}}">Edit</a>
+				</td>
+				{% endif %}
+				
+			</tr>
+			
+			{% endfor %}
+		</table>
+</div>
+
+
+{% endblock %}

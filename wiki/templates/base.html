@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My First Wiki</title>
+		<link type="text/css" rel="stylesheet" href="/static/main.css" />
+	</head>
+	<body>
+		<div class="tool_options">
+		<div class="login-area">
+			{% if show_options %}
+				{% if user %}
+				<a class="login-link" href="/_edit{{url}}">edit</a>
+				|
+				<a class="login-link" href="/_history{{url}}">history</a>
+				{% else %}
+				<a class="login-link" href="/_history{{url}}">history</a>
+				{% endif %}
+			{% else %}
+				<a class="login-link" href="{{page_path}}">back to page</a>
+			{% endif %}
+		</div>
+		<br>
+		<div class="login-area">
+			{% if user %}
+				{{user.username}} (<a class="login-link" href="/logout?path={{url}}">logout</a>)
+			{% else %}
+			<a class="login-link" href="/login">login</a>
+			|
+			<a class="login-link" href="/signup">signup</a>
+			{% endif %}
+		</div>
+		</div>
+		<div id="content">
+		{% block content %}
+		{% endblock %}
+		</div>
+	</body>
+</html>

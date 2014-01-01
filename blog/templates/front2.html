@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	{%for blogpost in blogposts %}
+		{{ blogpost.render() | safe }}
+		<br><br>
+	{% endfor %}
+	<h2 class="title-date">{{query_time}}</h2>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Homework Blog</title>
+		 <style type="text/css">
+			
+			
+		</style>
+	</head>
+	
+	<body>
+		<h1>Blog for Udacity Homework</h1>
+		
+			{% for blogpost in blogposts %}
+			<div class="blogpost">
+				<div class="blogpost-title">
+					<span class="title-subject">
+						{{blogpost.subject}}
+					</span>
+					<span class="title-date">
+						{{blogpost.created}}
+					</span>
+				</div>
+				<pre class="blogpost-content">
+					{{blogpost.content}}
+				</pre>
+			</div>
+		{% endfor %}
+		
+	</body>
+</html>

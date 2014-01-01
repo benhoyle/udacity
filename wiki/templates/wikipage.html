@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="wiki-content">
+		{{wiki.render_text() | safe}}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+<div class="blogpost">
+				<div class="blogpost-title">
+					<div class="title-subject">
+						<a href="/{{blogpost.key.id()}}" class="title-subject">{{blogpost.subject}}</a>
+					</div>
+					<div class="title-date">
+						{{blogpost.created.strftime("%d %b %Y")}}
+					</div>
+				</div>
+				<div class="blogpost-content">
+					{{blogpost._render_text | safe}}
+				</div>
+</div>

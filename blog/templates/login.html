@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+
+    </style>
+
+  </head>
+  
+<body>
+<div class="login-area">
+<h2>Login</h2>
+<form method="post">
+<br>
+	<table>
+	<tr>
+		<td class="label">
+			Username
+		</td>
+		<td class="input">
+			<input type="text" name="username">
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Password
+		</td>
+		<td class="input">
+			<input type="password" name="password" >
+		</td>
+	</tr>
+	<tr>
+		<td class="error">
+			{{login_error}}
+		</td>
+	</tr>
+	<tr>
+		<td></td><td><input type="submit"></td>
+		
+	</tr>
+	</table>
+	
+</form>
+</div>
+</body>

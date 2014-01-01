@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Homework Blog</title>
+		<link type="text/css" rel="stylesheet" href="/static/main.css" />
+	</head>
+	<body>
+		<a class="main-title" href="/">Blog for Udacity Homework</a>
+		<div class="sub-menu-div">
+		<ul class="sub-menu">
+			<li class="sub-menu-item">
+			<a class="sub-title" href="/newpost">Add a New Post</a>
+			</li>
+			<li class="sub-menu-item">
+				<a class="sub-title" href="/signup">Signup</a>
+			</li>
+			<li class="sub-menu-item">
+				<a class="sub-title" href="/login">Login</a>
+			</li>
+			<li class="sub-menu-item">
+				<a class="sub-title" href="/logout">Logout</a>
+			</li>
+		</ul>
+		</div>
+		
+		
+		<div id="content">
+		{% block content %}
+		{% endblock %}
+		</div>
+	</body>
+</html>
